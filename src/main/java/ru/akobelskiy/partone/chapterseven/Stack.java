@@ -1,18 +1,19 @@
 package ru.akobelskiy.partone.chapterseven;
 
 public class Stack {
-    private  int[] stack = new int[10];
+    private  int[] stck;
     private int tos;
 
-    Stack() {
+    Stack(int size) {
+        stck = new int[size];
         tos = -1;
     }
 
     void push(int item) {
-        if (tos == 9) {
+        if (tos == stck.length - 1) {
             System.out.println("Стек полон.");
         } else {
-            stack[++tos] = item;
+            stck[++tos] = item;
         }
     }
 
@@ -21,7 +22,7 @@ public class Stack {
             System.out.println("Стек опустошен.");
             return 0;
         } else {
-            return stack[tos--];
+            return stck[tos--];
         }
     }
 }

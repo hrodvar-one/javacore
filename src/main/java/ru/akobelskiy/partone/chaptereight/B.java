@@ -1,13 +1,26 @@
 package ru.akobelskiy.partone.chaptereight;
 
 public class B extends A {
-    int k;
+    public int k;
+    int i;
 
-    void showk() {
-        System.out.println("k: " + k);
+    B(int a, int b) {
+        super.i = a;
+        i = b;
     }
 
-    void sum() {
-        System.out.println("i + j + k: " + (i + j + k));
+    public B() {
+
+    }
+
+    void show() {
+        System.out.println("i в суперклассе: " + super.i);
+        System.out.println("i в подклассе: " + i);
+    }
+
+    public void showk() {
+    }
+
+    public void sum() {
     }
 }

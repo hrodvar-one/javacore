@@ -6,4 +6,8 @@ public interface MyIF {
     default String getString() {
         return "Стандартная строка";
     }
+
+    static int getDefaultNumber() {
+        return 0;
+    }
 }
